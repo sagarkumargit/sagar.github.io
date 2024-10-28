@@ -1,5 +1,4 @@
-import Footer from "@/Components/Footer/footer";
-import Header from "@/Components/Header/header";
+import Layout from "@/Components/Layout/Layout";
 import ProjectCard from "@/Components/ProjectCard";
 
 const Projects = () => {
@@ -23,18 +22,18 @@ const Projects = () => {
   ];
 
   return (
-    <div className="">
-      <Header />
-      <main className="container mx-auto p-4 flex flex-col min-h-screen">
-        <h1 className="text-3xl font-bold text-center mb-8">Projects</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {projectData.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
-        </div>
-      </main>
-      <Footer />
-    </div>
+    <Layout>
+      <div className="bg-gradient-to-r from-teal-100 to-white min-h-screen">
+        <main className="container mx-auto p-4 flex flex-col">
+          <h1 className="text-3xl font-bold text-slate-800 text-center mb-8">Projects</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {projectData.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
+        </main>
+      </div>
+    </Layout>
   );
 };
 
