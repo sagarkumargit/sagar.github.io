@@ -1,6 +1,5 @@
 'use client'
-import Footer from '@/Components/Footer/footer';
-import Header from '@/Components/Header/header';
+import Layout from '@/Components/Layout/Layout';
 import React, { useEffect, useState } from 'react';
 
 const skillsData = [
@@ -23,28 +22,28 @@ const Skills = () => {
   }, []);
   return (
     <>
-      <Header />
-      <div className="p-8 flex flex-col min-h-screen">
-        <h2 className="text-2xl font-bold mb-6">Skills</h2>
-        {skillsData.map((skill) => (
-          <div key={skill.name} className="mb-4">
-            <div className="flex justify-between mb-1">
-              <span className="font-medium">{skill.name}</span>
-              <span className="font-medium">{skill.level}%</span>
+      <Layout>
+        <div className="p-8 flex flex-col min-h-screen bg-gradient-to-r from-green-50 to-blue-50">
+          <h2 className="text-2xl font-bold mb-6">Skills</h2>
+          {skillsData.map((skill) => (
+            <div key={skill.name} className="mb-4">
+              <div className="flex justify-between mb-1">
+                <span className="font-medium">{skill.name}</span>
+                <span className="font-medium">{skill.level}%</span>
+              </div>
+              <div className="relative w-full h-4 bg-gray-700 rounded">
+                <div
+                  className={`absolute h-full bg-blue-500 rounded transition-all duration-700 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  style={{
+                    width: isVisible ? `${skill.level}%` : '0%',
+                  }}
+                />
+              </div>
             </div>
-            <div className="relative w-full h-4 bg-gray-200 rounded">
-              <div
-                className={`absolute h-full bg-blue-500 rounded transition-all duration-700 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'
-                  }`}
-                style={{
-                  width: isVisible ? `${skill.level}%` : '0%',
-                }}
-              />
-            </div>
-          </div>
-        ))}
-      </div>
-      <Footer />
+          ))}
+        </div>
+      </Layout>
     </>
   );
 };

@@ -1,33 +1,58 @@
-import Footer from "@/Components/Footer/footer";
-import Header from "@/Components/Header/header";
-import Image from "next/image";
+import Layout from "@/Components/Layout/Layout";
+import Head from "next/head";
 
 const Home = () => {
     return (
-        <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex flex-col items-center justify-center min-h-screen text-center p-4">
-                <div className="flex flex-col md:flex-row items-center justify-center animate-fade-in">
-                    <div className="mb-6 md:mb-0 md:mr-8">
-                        <h1 className="text-5xl font-bold mb-4 transition-transform transform hover:scale-105">
-                            I&apos;M <span className="text-black font-serif">Sagar Kumar</span>
-                        </h1>
-                        <p className="text-lg mb-6 animate-slide-in">
-                            I am a passionate developer specializing in web development and design.
+        <Layout>
+            <div className="bg-gray-900 text-white overflow-hidden">
+                <Head>
+                    <title>Freelance Developer</title>
+                    <meta name="description" content="Welcome to my portfolio!" />
+                </Head>
+
+                <header className="h-screen flex items-center justify-center bg-gradient-to-r from-green-500 to-blue-600">
+                    <div className="text-center animate-fade-in">
+                        <h1 className="text-6xl font-bold">I&lsquo;m a Freelance Developer</h1>
+                        <p className="mt-4 text-lg">Specializing in MERN and MEAN stacks</p>
+                        <a href="#about" className="mt-6 inline-block bg-white text-gray-900 py-2 px-4 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
+                            Learn More
+                        </a>
+                    </div>
+                </header>
+
+                <section id="about" className="py-20 bg-gray-800">
+                    <div className="container mx-auto px-6 text-center">
+                        <h2 className="text-4xl font-bold mb-6">About Me</h2>
+                        <p className="text-lg mb-4">
+                            I&apos;m a passionate developer with over 4.6 years of experience in creating efficient web applications.
+                        </p>
+                        <p className="text-lg">
+                            I love observing the world and learning new things, integrating them into my projects to innovate and improve.
                         </p>
                     </div>
-                    <div>
-                        <Image
-                            src="https://via.placeholder.com/400"
-                            width={500}
-                            height={500}
-                            alt="Sagar Kumar"
-                        />
+                </section>
+
+                <section className="py-20 bg-gray-900">
+                    <div className="container mx-auto px-6 text-center">
+                        <h2 className="text-4xl font-bold mb-6">Services</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div className="bg-gray-700 p-6 rounded-lg hover:shadow-lg transform transition duration-300 hover:-translate-y-2">
+                                <h3 className="text-xl font-semibold">Web Development</h3>
+                                <p className="mt-2">Building responsive and dynamic web applications.</p>
+                            </div>
+                            <div className="bg-gray-700 p-6 rounded-lg hover:shadow-lg transform transition duration-300 hover:-translate-y-2">
+                                <h3 className="text-xl font-semibold">UI/UX Design</h3>
+                                <p className="mt-2">Creating user-friendly interfaces and experiences.</p>
+                            </div>
+                            <div className="bg-gray-700 p-6 rounded-lg hover:shadow-lg transform transition duration-300 hover:-translate-y-2">
+                                <h3 className="text-xl font-semibold">Consultation</h3>
+                                <p className="mt-2">Advising on tech solutions tailored to your needs.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </main>
-            <Footer />
-        </div>
+                </section>
+            </div>
+        </Layout>
     );
 };
 
