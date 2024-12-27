@@ -1,5 +1,6 @@
 // components/TagInput.tsx
 
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 interface User {
@@ -72,10 +73,11 @@ const TagInput: React.FC<TagInputProps> = ({ users, value, onChange, onTagSelect
               onClick={() => handleUserSelect(user)}
               className="flex items-center p-2 cursor-pointer hover:bg-gray-100"
             >
-              <img
+              <Image
                 src={user.avatar || '/default-avatar.png'} // Use a fallback image if no avatar is provided
                 alt={user.name}
                 className="w-8 h-8 rounded-full mr-2"
+                priority
               />
               <span className="text-gray-800">{user.name}</span>
             </li>
