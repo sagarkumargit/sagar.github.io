@@ -2,7 +2,7 @@ import Image from "next/image";
 
 type ProjectCardProps = {
   title: string;
-  imageUrl: any,
+  imageUrl: string,
   description: string;
   link: string;
 };
@@ -15,6 +15,8 @@ const ProjectCard = ({ title, imageUrl, description, link }: ProjectCardProps) =
         src={imageUrl}
         alt="adani-one"
         priority
+        width={500}
+        height={600}
       />
       
       <p className="mt-2 text-gray-600 mb-4 line-clamp-3">{description}</p>
