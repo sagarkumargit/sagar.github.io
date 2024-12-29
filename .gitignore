@@ -2,11 +2,10 @@
 
 # dependencies
 /node_modules
-package-lock.json
 /.pnp
 .pnp.js
 .yarn/install-state.gz
-
+.env.local
 # testing
 /coverage
 

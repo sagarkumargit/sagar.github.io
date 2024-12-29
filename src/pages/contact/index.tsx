@@ -1,15 +1,19 @@
 import ContactForm from "@/Components/ContactForm";
 import Layout from "@/Components/Layout/Layout";
+import Head from "next/head";
 
 const Contact = () => {
     return (
         <Layout>
-            <div className="bg-gray-100">
-                <main className="flex flex-col items-center justify-center min-h-screen p-4">
-                    <h1 className="text-4xl font-bold mb-6 animate-fade-in">Contact Me</h1>
+            <Head>
+                <title>Contact Me | Sagar Kumar</title>
+            </Head>
+
+            <section className="py-12 min-h-screen bg-gradient-to-r from-yellow-400 to-yellow-200 text-black">
+                <div className="container mx-auto flex justify-center items-center pt-24">
                     <ContactForm />
-                </main>
-            </div>
+                </div>
+            </section>
         </Layout>
     );
 };
