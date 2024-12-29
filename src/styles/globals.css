@@ -9,3 +9,20 @@ body {
 a {
   @apply text-blue-600 hover:text-blue-800;
 }
+/* Add to your global styles or component styles */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
