@@ -1,3 +1,6 @@
+'use client'
+
+import { useTheme } from '../../Context/themeContext';  // Import theme context to access the current theme
 import Layout from "@/Components/Layout/Layout";
 import ProjectCard from "@/Components/ProjectCard";
 import adaniOne from '@/assets/images/1.png'
@@ -7,6 +10,8 @@ import successAi from '@/assets/images/success ai.png'
 import timeinator from '@/assets/images/timeinator.png'
 
 const Projects = () => {
+  const { theme } = useTheme(); // Get the current theme (light or dark)
+
   const projectData = [
     { 
       title: 'Success Ai', 
@@ -17,7 +22,7 @@ const Projects = () => {
     { 
       title: 'Makaansaz', 
       imageUrl: makaansaz.src,
-      description: ` MakaanSaz is transforming the real estate landscape in Pakistan by bridging the gap between clients and agents with innovative, AI-driven solutions. Our platform simplifies the property buying, selling, and renting experience, offering a centralized hub where users can easily find trusted agents, explore verified listings, and access valuable market insights. At MakaanSaz, we are committed to transparency, efficiency, and empowerment, ensuring that every stakeholder—whether buyer, seller, or agent—benefits from a seamless and informed real estate journey. Join us as we reshape the future of real estate in Pakistan`, 
+      description: `MakaanSaz is transforming the real estate landscape in Pakistan by bridging the gap between clients and agents with innovative, AI-driven solutions. Our platform simplifies the property buying, selling, and renting experience, offering a centralized hub where users can easily find trusted agents, explore verified listings, and access valuable market insights. At MakaanSaz, we are committed to transparency, efficiency, and empowerment, ensuring that every stakeholder—whether buyer, seller, or agent—benefits from a seamless and informed real estate journey. Join us as we reshape the future of real estate in Pakistan`, 
       link: 'https://dev.makaansaz.com/find-agents' 
     },
     {
@@ -38,17 +43,18 @@ const Projects = () => {
       description: 'Kaboodle has been integral in keeping dialogue with our community and protecting our data. The tools they provide to help us do our job and promote our shows in a way that isn’t reliant on generic ticket agent marketing',
       link: 'https://kaboodle.com/'
     },
-
   ];
 
   return (
     <Layout>
-      <div className="bg-gradient-to-r from-teal-100 to-white min-h-screen">
+      <div className={`bg-gradient-to-r pt-24 ${theme === 'light' ? 'from-yellow-400 to-yellow-200' : 'from-black to-yellow-400'} min-h-screen`}>
         <main className="container mx-auto p-4 flex flex-col">
-          <h1 className="text-3xl font-bold text-slate-800 text-center mb-8">Projects</h1>
+          <h1 className={`text-3xl font-bold text-center mb-8 ${theme === 'light' ? 'text-black' : 'text-yellow-400'}`}>
+            Projects
+          </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {projectData.map((project, index) => (
-              <ProjectCard key={index} {...project} />
+              <ProjectCard key={index} {...project} theme={theme} />
             ))}
           </div>
         </main>

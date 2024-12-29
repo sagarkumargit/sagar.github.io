@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,6 +11,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        yellow: {
+          400: "#F7C700",
+          500: "#F6B000",
+          600: "#FF9900",
+        },
+        black: "#1A1A1A",
+      },
       animation: {
         'fade-in': 'fadeIn 1s ease-out forwards',
         'slide-in': 'slideIn 0.5s ease-out forwards',
