@@ -16,7 +16,7 @@ const Projects = () => {
   const projectData = [
     { 
       title: 'Horecastore', 
-      imageUrl: successAi.src,
+      imageUrl: horecastore.src,
       description: `HorecaStore is the all-in-one B2B procurement platform purpose-built for the hospitality industry, serving hotels, restaurants, cafés, and cloud kitchens of every size.`, 
       link: 'https://www.thehorecastore.com/' 
     },
