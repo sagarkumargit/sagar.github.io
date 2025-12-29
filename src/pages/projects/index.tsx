@@ -7,6 +7,7 @@ import adaniOne from '@/assets/images/1.png'
 import kaboodle from '@/assets/images/kaboodle.png'
 import makaansaz from '@/assets/images/makaansaz.png'
 import successAi from '@/assets/images/success ai.png'
+import horecastore from '@/assets/images/horecastore.png'
 import timeinator from '@/assets/images/timeinator.png'
 
 const Projects = () => {
@@ -14,16 +15,22 @@ const Projects = () => {
 
   const projectData = [
     { 
+      title: 'Horecastore', 
+      imageUrl: successAi.src,
+      description: `HorecaStore is the all-in-one B2B procurement platform purpose-built for the hospitality industry, serving hotels, restaurants, cafés, and cloud kitchens of every size.`, 
+      link: 'https://www.thehorecastore.com/' 
+    },
+    { 
       title: 'Success Ai', 
       imageUrl: successAi.src,
       description: `An AI-powered email marketing platform that helps businesses of all sizes craft and manage email campaigns. It uses artificial intelligence technology to automatically personalize emails based on the recipient's name, company, and industry. This helps improve open rates and click-through rates.`, 
-      link: 'https://dev.makaansaz.com/find-agents' 
+      link: 'https://www.success.ai/' 
     },
     { 
       title: 'Makaansaz', 
       imageUrl: makaansaz.src,
       description: `MakaanSaz is transforming the real estate landscape in Pakistan by bridging the gap between clients and agents with innovative, AI-driven solutions. Our platform simplifies the property buying, selling, and renting experience, offering a centralized hub where users can easily find trusted agents, explore verified listings, and access valuable market insights. At MakaanSaz, we are committed to transparency, efficiency, and empowerment, ensuring that every stakeholder—whether buyer, seller, or agent—benefits from a seamless and informed real estate journey. Join us as we reshape the future of real estate in Pakistan`, 
-      link: 'https://dev.makaansaz.com/find-agents' 
+      link: 'https://makaansaz.com/find-agents' 
     },
     {
       title: 'Adani One',
