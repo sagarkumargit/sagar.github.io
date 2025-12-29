@@ -12,11 +12,11 @@ type Experience = {
 const experienceData: Experience[] = [
   {
     title: "MEAN and MERN Stack Developer",
-    company: "Success AI",
+    company: "Freelancing",
     role: "Developed and maintained web applications using React, Node.js, and MongoDB.",
-    duration: "Nov 2024 - Present",
+    duration: "Nov 2023 - Present",
     description:
-      `Success AI is a leading company in the tech industry. As a full-stack developer, 
+      `Worked on leading company in the tech industry. As a full-stack developer, 
       I contributed to both frontend and backend development. I worked with React for the frontend and Node.js for the backend, 
       integrating various APIs and databases. My work involved improving application performance, 
       implementing new features, and ensuring scalability for future growth.`,
