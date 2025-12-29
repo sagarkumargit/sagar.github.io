@@ -83,7 +83,7 @@ const About = () => {
           <p
             className={`text-lg mb-4 transition-all duration-500 ${theme === 'light' ? 'text-black' : 'text-yellow-400'}`}
           >
-            Hi! I&lsquo;m <span className="font-semibold text-teal-600">Sagar Kumar</span>, a full-stack developer with over 4.6 years of experience in building robust applications using the
+            Hi! I&lsquo;m <span className="font-semibold text-teal-600">Sagar Kumar</span>, a full-stack developer with over 6+ years of experience in building robust applications using the
             <span className="font-semibold"> MERN</span> and <span className="font-semibold">MEAN</span> stacks.
             I thrive on creating seamless user experiences and scalable solutions that address real-world problems.
           </p>
